@@ -10,6 +10,8 @@ import junit.framework.Assert;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import training.daniel.IO.CSVLoader;
 
@@ -17,28 +19,35 @@ public class CSVLoaderTest
 {
     private static List<List<String>> cells;
     private static final String HEADER_CITY = "City";
+    final static Logger logger = LoggerFactory.getLogger(CSVLoaderTest.class);
     private static File tempFile;
+
     private static final String VALUE_ILM = "Ilmenau";
 
     @BeforeClass
     public static void createFileContent() throws IOException
     {
         tempFile = File.createTempFile("testinitState", ".csv");
-        FileWriter fWriter = new FileWriter(tempFile);
-        fWriter.append("Name;" + HEADER_CITY + ";Age");
-        fWriter.append(System.lineSeparator());
-        fWriter.append("Hans;Wurststadt;-5");
-        fWriter.append(System.lineSeparator());
-        fWriter.append("Hacke;Jena;10");
-        fWriter.append(System.lineSeparator());
-        fWriter.append("Petra;" + VALUE_ILM + ";55555");
-        fWriter.append(System.lineSeparator());
-        fWriter.append("Bert;Berlin;159");
-        fWriter.append(System.lineSeparator());
-        fWriter.append("Boris;Paris;asdf");
-        fWriter.append(System.lineSeparator());
-        fWriter.append("Petra;Münster;/*-");
-        fWriter.close();
+        try (FileWriter fWriter = new FileWriter(tempFile))
+        {
+            fWriter.append("Name;" + HEADER_CITY + ";Age");
+            fWriter.append(System.lineSeparator());
+            fWriter.append("Hans;Wurststadt;-5");
+            fWriter.append(System.lineSeparator());
+            fWriter.append("Hacke;Jena;10");
+            fWriter.append(System.lineSeparator());
+            fWriter.append("Petra;" + VALUE_ILM + ";55555");
+            fWriter.append(System.lineSeparator());
+            fWriter.append("Bert;Berlin;159");
+            fWriter.append(System.lineSeparator());
+            fWriter.append("Boris;Paris;asdf");
+            fWriter.append(System.lineSeparator());
+            fWriter.append("Petra;Münster;/*-");
+        }
+        catch(IOException e)
+        {
+            logger.error("Exception while handling TestFile", e);
+        }
         CSVLoader loader = new CSVLoader(";");
         cells = loader.load(tempFile.getPath());
     }

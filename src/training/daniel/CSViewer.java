@@ -15,6 +15,7 @@ import training.daniel.navigation.NavigationRegistrator;
 import training.daniel.navigation.NavigationRegistratorImpl;
 import training.daniel.navigation.Navigator;
 import training.daniel.navigation.NavigatorImpl;
+import training.daniel.server.CVSServer;
 import training.daniel.state.NavigationState;
 import training.daniel.state.StateMgr;
 
@@ -33,6 +34,15 @@ public class CSViewer
      */
     public static void main(String[] args) throws IOException
     {
+        try
+        {
+            CVSServer server = new CVSServer();
+        }
+        catch(Exception e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         CSVLoader loader = new CSVLoader(";");
         List<List<String>> cells = loader.load(args[0]);
         CSViewer instance = new CSViewer();
