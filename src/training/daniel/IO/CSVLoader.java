@@ -1,7 +1,7 @@
 /**
  * 
  */
-package training.daniel;
+package training.daniel.IO;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -28,11 +28,16 @@ public class CSVLoader
         List<List<String>> result = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath)))
         {
+            int i = 0;
             String dataRow = reader.readLine();
             while(dataRow != null)
             {
                 String[] dataArray = dataRow.split(columnSep);
-                result.add(Arrays.asList(dataArray));
+                List<String> row = new ArrayList<>(dataArray.length + 1);
+                row.add(String.valueOf(i));
+                row.addAll(Arrays.asList(dataArray));
+                result.add(row);
+                i++;
                 dataRow = reader.readLine(); // Read next line of data.
             }
         }
