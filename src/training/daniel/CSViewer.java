@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import training.daniel.IO.CSVLoader;
 import training.daniel.IO.InputReader;
 import training.daniel.IO.InputReaderImpl;
 import training.daniel.IO.UIBuilder;
@@ -15,7 +14,7 @@ import training.daniel.navigation.NavigationRegistrator;
 import training.daniel.navigation.NavigationRegistratorImpl;
 import training.daniel.navigation.Navigator;
 import training.daniel.navigation.NavigatorImpl;
-import training.daniel.server.CVSServer;
+import training.daniel.server.CSVServer;
 import training.daniel.state.NavigationState;
 import training.daniel.state.StateMgr;
 
@@ -36,18 +35,15 @@ public class CSViewer
     {
         try
         {
-            CVSServer server = new CVSServer();
+            CSVServer server = new CSVServer();
         }
         catch(Exception e)
         {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        CSVLoader loader = new CSVLoader(";");
-        List<List<String>> cells = loader.load(args[0]);
-        CSViewer instance = new CSViewer();
-        StateMgr currentState = instance.getState(cells, Integer.valueOf(args[1]));
-        instance.processMenu(currentState);
+
+        // instance.processMenu(currentState);
 
     }
 
