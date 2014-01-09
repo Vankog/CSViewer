@@ -54,7 +54,6 @@ public class CSVLoader
             row.add(String.valueOf(i));
             row.addAll(Arrays.asList(dataArray));
             result.add(row);
-            i++;
         }
         return result;
     }

@@ -3,6 +3,7 @@ package tests.training.daniel;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.List;
 
 import junit.framework.Assert;
@@ -48,7 +49,7 @@ public class CSVLoaderTest
         {
             logger.error("Exception while handling TestFile", e);
         }
-        CSVLoader loader = new CSVLoader(";");
+        CSVLoader loader = new CSVLoader(";", Charset.forName("UTF-8"));
         cells = loader.load(tempFile.getPath());
     }
 

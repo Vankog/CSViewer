@@ -30,7 +30,7 @@ public class StringFileReader
             sb.append(nl);
         }
 
-        return lines.toString();
+        return sb.toString();
     }
 
     public List<String> readAllLines(String filePath)

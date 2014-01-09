@@ -44,7 +44,6 @@ public class CSViewer
         }
 
         // instance.processMenu(currentState);
-
     }
 
     public StateMgr getState(List<List<String>> cells, Integer pSize)

@@ -11,20 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import training.daniel.CSViewer;
 import training.daniel.IO.CSVLoader;
+import training.daniel.IO.StringFileReader;
 import training.daniel.state.StateMgr;
 
 @SuppressWarnings("serial")
 public class CSVLoaderServlet extends HttpServlet
 {
-    final String head = "<head><title>Example Web Application</title></head>";
-    final String input = "<body>"
-                    + "<p>This website shows a CSV file on the server.</p>"
-                    + "<form method='GET' action=''/>"
-                    + "file path on server: <input name='file' type='text' value='%s'/><br/>"
-                    + "page size: <input name='psize' type='number' value='%d'/><br/>"
-                    + "<input type='submit' value='Submit' />"
-                    + "</form>"
-                    + "</body>";
+    private final Charset chSet = Charset.forName("UTF-8");
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
@@ -41,18 +34,22 @@ public class CSVLoaderServlet extends HttpServlet
         }
         Integer pSize = Integer.valueOf(paramPSize);
 
+        StringFileReader reader = new StringFileReader(chSet);
         response.setContentType("text/html;charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
-        response.getWriter().println(head);
-        response.getWriter().printf(input, file, pSize);
+        response.getWriter().println(reader.readAll("./src/training/daniel/resources/header.template"));
+        response.getWriter().printf(reader.readAll("./src/training/daniel/resources/input.template"), file, pSize);
 
         if (file.isEmpty() || pSize == null)
         {
             return;
         }
 
-        CSVLoader loader = new CSVLoader(";", Charset.forName("UTF-8"));
+        CSVLoader loader = new CSVLoader(";", chSet);
         List<List<String>> cells = loader.load(file);
+        response.getWriter().println(new StringFileReader(chSet).readAll(file));
+        System.out.println(new StringFileReader(chSet).readAll(file));
+        response.getWriter().println(cells.toString());
         CSViewer instance = new CSViewer();
         StateMgr currentState = instance.getState(cells, Integer.valueOf(paramPSize));
 
