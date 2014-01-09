@@ -5,28 +5,30 @@ package training.csviewer;
 
 import java.io.IOException;
 
-import training.csviewer.server.CSVServer;
+import training.csviewer.server.WebServer;
 
 /**
  * 
  */
-public class CSViewer
+public class CSViewerServerMain
 {
 
     /**
+     * Starts up the Webserver and runs the CSViewer application.
+     * 
      * @param args
+     *            Not defined.
      * @throws IOException
      */
     public static void main(String[] args) throws IOException
     {
         try
         {
-            CSVServer server = new CSVServer();
+            WebServer server = new WebServer();
         }
         catch(Exception e)
         {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            throw new RuntimeException("Exception in Server", e);
         }
     }
 }

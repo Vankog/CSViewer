@@ -3,10 +3,10 @@ package training.csviewer.server;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletHandler;
 
-public class CSVServer
+public class WebServer
 {
 
-    public CSVServer() throws Exception
+    public WebServer() throws Exception
     {
         // Create a basic jetty server object that will listen on port 8080. Note that if you set this to port 0
         // then a randomly available port will be assigned that you can either look in the logs for the port,
@@ -20,9 +20,7 @@ public class CSVServer
 
         // Passing in the class for the servlet allows jetty to instantite an instance of that servlet and mount it
         // on a given context path.
-
-        // !! This is a raw Servlet, not a servlet that has been configured through a web.xml or anything like that !!
-        handler.addServletWithMapping(CSVLoaderServlet.class, "/*");
+        new ServletRegistrator().registerServlets(handler);
 
         // Start things up! By using the server.join() the server thread will join with the current thread.
         // See "http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Thread.html#join()" for more details.
