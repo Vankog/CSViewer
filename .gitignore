@@ -17,8 +17,4 @@ bin/
 
 #workspace
 *.bak
-.metadata/*
-!.metadata/.plugins/
-
-.metadata/.plugins/*
-!.metadata/.plugins/org.eclipse.*
+.metadata/
