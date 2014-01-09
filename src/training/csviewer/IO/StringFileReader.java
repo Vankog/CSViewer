@@ -1,4 +1,4 @@
-package training.daniel.IO;
+package training.csviewer.IO;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -18,7 +18,7 @@ public class StringFileReader
         this.chSet = charSet;
     }
 
-    public String readAll(String filePath)
+    public String readWholeFile(String filePath)
     {
         List<String> lines = readAllLines(filePath);
 

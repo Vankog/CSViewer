@@ -1,4 +1,4 @@
-package training.daniel.server;
+package training.csviewer.server;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletHandler;
