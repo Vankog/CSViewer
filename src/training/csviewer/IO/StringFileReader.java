@@ -35,11 +35,11 @@ public class StringFileReader
 
     public List<String> readAllLines(String filePath)
     {
-        Path p = Paths.get(filePath);
+        Path pathToFile = Paths.get(filePath);
         List<String> lines;
         try
         {
-            lines = Files.readAllLines(p, chSet);
+            lines = Files.readAllLines(pathToFile, chSet);
         }
         catch(IOException e)
         {
