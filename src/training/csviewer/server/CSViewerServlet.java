@@ -34,7 +34,7 @@ public class CSViewerServlet extends HttpServlet
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
         /*
-         * SAMPLE
+         * SAMPLE stub
          */
 
         // get parameters
@@ -50,7 +50,9 @@ public class CSViewerServlet extends HttpServlet
         response.setContentType("text/html;charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
 
-        // generate output
+        /*
+         * temporary output stub
+         */
         try (PrintWriter out = response.getWriter())
         {
             StringFileReader reader = new StringFileReader(chSet);
@@ -66,9 +68,9 @@ public class CSViewerServlet extends HttpServlet
             resURL = System.class.getResource(inputResName);
             resPath = Paths.get(resURL.toURI());
             // printf() for formatted strings, so you can use arguments
-            out.printf(reader.readWholeFile("./src/training/csviewer/resources/input.template", System.lineSeparator()),
-                            file, pSize);
+            out.printf(reader.readWholeFile(resPath, System.lineSeparator()), file, pSize);
 
+            // print out file and add line breaks
             if (file != null)
                 out.println(reader.readWholeFile(file, "<br/>"));
 
@@ -88,19 +90,21 @@ public class CSViewerServlet extends HttpServlet
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
         /*
-         * SAMPLE
+         * SAMPLE stub
          */
 
         // get parameters
         String param = request.getParameter("param");
 
-        // generate output
+        /*
+         * temporary output stub
+         */
         try (PrintWriter out = response.getWriter())
         {
             // write HTML
             out.println("<html>");
             out.println("<body>");
-            out.println("You entered \"" + param + "\" into the text box.");
+            out.printf("You entered \"%s\" into the text box.", param);
             out.println("</body>");
             out.println("</html>");
         }
