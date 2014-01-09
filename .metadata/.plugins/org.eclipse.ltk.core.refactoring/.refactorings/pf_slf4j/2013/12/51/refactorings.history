@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;lib&apos; to &apos;CSViewer&apos;&#x0D;&#x0A;- Original project: &apos;pf_slf4j&apos;&#x0D;&#x0A;- Destination element: &apos;CSViewer&apos;&#x0D;&#x0A;- Original element: &apos;lib&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move folder" destination="=CSViewer" element1="lib" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1387277589088" units="0" version="1.0"/>
+</session>

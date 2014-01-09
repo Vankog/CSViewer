@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1386074302141" defaultVMConnector\="">\r\n<vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\r\n<vm id\="1386074302141" name\="IntershopStudio" path\="D\:\\IntershopStudio"/>\r\n<vm id\="com.intershop.enfinity.studio.beehive.vm" name\="Intershop Server JDK" path\="D\:\\IntershopStudio"/>\r\n</vmType>\r\n</vmSettings>\r\n

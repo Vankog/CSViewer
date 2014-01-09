@@ -1,0 +1,43 @@
+/**
+ * 
+ */
+package training.csviewer;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import training.csviewer.IO.InputReader;
+import training.csviewer.IO.InputReaderImpl;
+import training.csviewer.IO.UIBuilder;
+import training.csviewer.navigation.NavigationRegistrator;
+import training.csviewer.navigation.NavigationRegistratorImpl;
+import training.csviewer.navigation.Navigator;
+import training.csviewer.navigation.NavigatorImpl;
+import training.csviewer.server.CSVServer;
+import training.csviewer.state.NavigationState;
+import training.csviewer.state.StateMgr;
+
+/**
+ * 
+ */
+public class CSViewer
+{
+
+    /**
+     * @param args
+     * @throws IOException
+     */
+    public static void main(String[] args) throws IOException
+    {
+        try
+        {
+            CSVServer server = new CSVServer();
+        }
+        catch(Exception e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+}

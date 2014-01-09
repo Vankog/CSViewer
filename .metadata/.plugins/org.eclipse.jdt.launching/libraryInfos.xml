@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="D:\IntershopStudio" version="1.7.0_09">
+<bootpath>
+<entry path="D:\IntershopStudio\jre\lib\resources.jar"/>
+<entry path="D:\IntershopStudio\jre\lib\rt.jar"/>
+<entry path="D:\IntershopStudio\jre\lib\sunrsasign.jar"/>
+<entry path="D:\IntershopStudio\jre\lib\jsse.jar"/>
+<entry path="D:\IntershopStudio\jre\lib\jce.jar"/>
+<entry path="D:\IntershopStudio\jre\lib\charsets.jar"/>
+<entry path="D:\IntershopStudio\jre\lib\jfr.jar"/>
+<entry path="D:\IntershopStudio\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="D:\IntershopStudio\jre\lib\ext"/>
+<entry path="C:\Windows\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="D:\IntershopStudio\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

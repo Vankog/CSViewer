@@ -1,0 +1,34 @@
+/**
+ * 
+ */
+package training.csviewer;
+
+import java.io.IOException;
+
+import training.csviewer.server.WebServer;
+
+/**
+ * 
+ */
+public class CSViewerMain
+{
+
+    /**
+     * Starts up the Webserver.
+     * 
+     * @param args
+     * @throws IOException
+     */
+    public static void main(String[] args) throws IOException
+    {
+        try
+        {
+            WebServer server = new WebServer();
+        }
+        catch(Exception e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+}

@@ -1,0 +1,58 @@
+1386077529046	Rename package 'com.test.csviewer'
+1386079367028	Extract method 'createFileContent'
+1386079433067	Extract method 'deleteContent'
+1386079567614	Rename method 'testInitState'
+1386079715634	Extract constant 'HEADER'
+1386081926307	Rename type 'Init'
+1386082347658	Rename type 'InitTest'
+1386082710090	Rename local variable 'values'
+1386148660336	Delete element
+1386151983134	Rename method 'print'
+1386151998157	Rename method 'printRow'
+1386152692596	Extract method 'print'
+1386153055060	Rename method 'print'
+1386153131114	Rename method 'printView'
+1386153136208	Rename method 'printGUI'
+1386153160150	Rename local variable 'page'
+1386153551129	Extract method 'processMenu'
+1386163850411	Move compilation unit
+1386163853744	Delete element
+1386164430898	Rename local variable 'VALIDATION_ROW'
+1386165019729	Delete elements
+1386165024615	Delete element
+1386165563373	Delete element
+1386231038476	Delete element
+1386231228029	Extract interface 'Printer'
+1386231247611	Move compilation unit
+1386231272127	Move compilation unit
+1386231287362	Move compilation unit
+1386231973483	Extract superclass 'AbstractPrinter'
+1386232742816	Delete element
+1386233809656	Rename local variable 'separator'
+1386233832845	Rename field 'SEPARATOR'
+1386233885744	Rename field 'COLUMN_SEPARATOR'
+1386233896499	Rename field 'columnSeparator'
+1386233910237	Rename field 'ROW_SEPARATOR'
+1386235685322	Delete element
+1386236533960	Extract constant 'NL'
+1386237637991	Rename local variable 'outPromter'
+1386239393516	Move compilation units
+1386239736292	Rename type 'Navigator'
+1386239838557	Rename method 'processInput'
+1386240410308	Rename local variable 'pSize'
+1386240940909	Extract Class...
+1386241163615	Rename type 'State'
+1386245003996	Rename package 'training.daniel.UI'
+1386245015235	Move compilation units
+1386245297292	Rename method 'setLastPage'
+1386246886930	Rename type 'NavActionRegister'
+1386248332972	Extract constant 'GO_TO_PAGE'
+1386248554945	Delete element
+1386249004475	Rename local variable 'actionRegistry'
+1386249009996	Rename local variable 'navbActionRegistry'
+1386250963302	Move compilation units
+1386252140036	Rename field 'GO_TO_PAGE'
+1386255401283	Move compilation unit
+1386257320807	Delete element
+1386257373753	Delete element
+1386257913489	Extract local variable 'firstPage'
