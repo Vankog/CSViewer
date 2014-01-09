@@ -18,3 +18,4 @@ bin/
 #workspace
 *.bak
 .metadata/
+#existing files in .metadata are flagged as --assume-unchanged
