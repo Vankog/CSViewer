@@ -1,8 +1,9 @@
 <body>
-    <p>This website shows a CSV file on the server.</p>
-    <form method='GET' action=''/>
-        file path on server: <input name='file' type='text' value='%s'/><br/>
-        page size: <input name='psize' type='number' value='%d'/><br/>
-    <input type='submit' value='Submit' />
+    <p>This website shows a CSV file on the server. (UTF-8, &quot;;&quot; as separator)</p>
+    <form method="GET" action="" name="CSVInputForm"/>
+        file path on server: <input name="file" type="text" id="CSVInputForm_file" value="%s"/><br/>
+        page size: <input name="psize" type="number" id="CSVInputForm_psize" value="%d"/><br/>
+    <input type="submit" value="Submit" />
     </form>
+    <a href="http://lmgtfy.com/?q=CSV+file">What is a CSV?</a>
 </body>

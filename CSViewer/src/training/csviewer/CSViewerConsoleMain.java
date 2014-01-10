@@ -40,12 +40,12 @@ public class CSViewerConsoleMain
         if (args.length < 2)
             return;
 
-        Path    csvPath;
+        Path csvPath;
         Integer pageSize;
         try
         {
-            csvPath     = Paths.get(args[0]);
-            pageSize    = Integer.valueOf(args[1]);
+            csvPath = Paths.get(args[0]);
+            pageSize = Integer.valueOf(args[1]);
         }
         catch(InvalidPathException | NumberFormatException e)
         {
@@ -55,15 +55,15 @@ public class CSViewerConsoleMain
         /*
          * temporary output stub
          */
-        
+
         // readkey and readline implementations
         InputReader in = new InputReaderImpl(System.out, System.in);
         Character key = in.readKey("Enter 'y' to print file: ");
-        
+
         if (key.equals('y'))
         {
             // simple file reader implementation
-            // readAllLines() can also output lines as List<String> 
+            // readAllLines() can also output lines as List<String>
             StringFileReader reader = new StringFileReader(Charset.forName("UTF-8"));
             reader.readWholeFile(csvPath, System.lineSeparator());
 

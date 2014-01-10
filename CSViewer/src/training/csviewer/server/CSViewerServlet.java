@@ -87,7 +87,8 @@ public class CSViewerServlet extends HttpServlet
     /**
      * Handles a POST request.
      */
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
+                    IOException
     {
         /*
          * SAMPLE stub
