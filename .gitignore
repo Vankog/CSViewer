@@ -18,9 +18,9 @@ bin/
 #workspace
 *.bak
 .metadata/*
-!.metadata/.plugins/
-.metadata/.plugins/*
-!.metadata/.plugins/org.eclipse.*
-.metadata/.plugins/org.eclipse.core.resources/.history/
-.metadata/.plugins/org.eclipse.jdt.junit.core/history/
+#!.metadata/.plugins/
+#.metadata/.plugins/*
+#!.metadata/.plugins/org.eclipse.*
+#.metadata/.plugins/org.eclipse.core.resources/.history/
+#.metadata/.plugins/org.eclipse.jdt.junit.core/history/
 #existing files in .metadata are flagged as --assume-unchanged
