@@ -1,7 +1,7 @@
 /**
  * 
  */
-package training.csviewer;
+package com.intershop.training.csviewer;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -9,11 +9,11 @@ import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import training.csviewer.IO.InputReaderImpl;
-import training.csviewer.IO.StringFileReader;
+import com.intershop.training.csviewer.io.InputReaderImpl;
+import com.intershop.training.csviewer.io.StringFileReader;
 
 /**
- * 
+ * Main class to start CSV viewer application
  */
 public class CSViewerConsoleMain
 {

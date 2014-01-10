@@ -1,9 +1,8 @@
-package training.csviewer.server;
+package com.intershop.training.csviewer.server;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -16,14 +15,14 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import training.csviewer.IO.StringFileReader;
+import resources.com.intershop.training.csviewer.server.RESOURCES;
+
+import com.intershop.training.csviewer.io.StringFileReader;
 
 @SuppressWarnings("serial")
 public class CSViewerServlet extends HttpServlet
 {
     private final Charset chSet = Charset.forName("UTF-8");
-    private final String headerResName = "/training/csviewer/resources/header.template";
-    private final String inputResName = "/training/csviewer/resources/input.template";
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
@@ -52,14 +51,11 @@ public class CSViewerServlet extends HttpServlet
             out.println("<html>");
 
             // load HTML from text file (UTF-8 format)
-            URL resURL = System.class.getResource(headerResName);
-            Path resPath = Paths.get(resURL.toURI());
-            out.println(reader.readWholeFile(resPath, System.lineSeparator()));
+            Path headerTemplate = Paths.get(System.class.getResource(RESOURCES.HEADER).toURI());
+            out.println(reader.readWholeFile(headerTemplate, System.lineSeparator()));
 
-            resURL = System.class.getResource(inputResName);
-            resPath = Paths.get(resURL.toURI());
-            // printf() for formatted strings, so you can use arguments
-            out.printf(reader.readWholeFile(resPath, System.lineSeparator()), parameterFile, parameterSize);
+            Path inputTemplate = Paths.get(System.class.getResource(RESOURCES.INPUT).toURI());
+            out.printf(reader.readWholeFile(inputTemplate, System.lineSeparator()), parameterFile, parameterSize);
 
             // print out file and add line breaks
             if (parameterFile != null)

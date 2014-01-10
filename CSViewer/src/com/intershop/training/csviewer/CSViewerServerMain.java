@@ -1,18 +1,18 @@
 /**
  * 
  */
-package training.csviewer;
+package com.intershop.training.csviewer;
 
 import java.io.IOException;
 
-import training.csviewer.server.WebServer;
+import com.intershop.training.csviewer.server.WebServer;
 
 /**
  * 
  */
 public class CSViewerServerMain
 {
-    static final Integer WEBSERVER_PORT = 8081;
+    public static final Integer WEBSERVER_PORT = 8081;
     /**
      * Starts up the Webserver and runs the CSViewer application.
      * 

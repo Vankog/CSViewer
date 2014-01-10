@@ -1,4 +1,4 @@
-package tests.training.csviewer.server;
+package tests.com.intershop.training.csviewer.server;
 
 import java.net.URI;
 import java.util.HashMap;
@@ -9,9 +9,12 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import resources.tests.com.intershop.training.csviewer.data.RESOURCES;
+
 import com.intershop.html.client.element.WebClient;
 import com.intershop.html.client.gargoyle.element.WebClientImpl;
 import com.intershop.html.runner.WebClientRunner;
+import com.intershop.training.csviewer.CSViewerServerMain;
 
 public class CSViewerServletTest
 {
@@ -32,11 +35,12 @@ public class CSViewerServletTest
     @Test
     public void testSimple()
     {
-        WebClientRunner runner = new WebClientRunner(client, URI.create("http://localhost:8081"));
+        WebClientRunner runner = new WebClientRunner(client, URI.create("http://localhost:"
+                        + CSViewerServerMain.WEBSERVER_PORT));
         Assert.assertTrue(runner.containsText("CSV"));
 
         Map<String, String> formData = new HashMap<>();
-        formData.put("file", "src/tests/training/resources/test.csv");
+        formData.put("file", "resources" + RESOURCES.TEST_CVS_SMALL);
         runner.submitForm("showCSV", formData);
         Assert.assertTrue(runner.containsText("Ilmenau"));
     }

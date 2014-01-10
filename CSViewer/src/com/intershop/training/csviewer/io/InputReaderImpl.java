@@ -1,7 +1,7 @@
 /**
  * 
  */
-package training.csviewer.IO;
+package com.intershop.training.csviewer.io;
 
 import java.io.IOException;
 import java.io.InputStream;
