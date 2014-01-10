@@ -33,18 +33,9 @@ public class CSViewerServlet extends HttpServlet
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
-        /*
-         * SAMPLE stub
-         */
-
         // get parameters
-        Integer pSize;
-        String file = request.getParameter("file");
-        String paramPSize = request.getParameter("psize");
-        if (paramPSize == null || paramPSize.isEmpty())
-            pSize = Integer.valueOf(3); // Fallback to a default value.
-        else
-            pSize = Integer.valueOf(paramPSize);
+        String parameterFile = request.getParameter("file");
+        Integer parameterSize = getPageSize(request);
 
         // set meta data
         response.setContentType("text/html;charset=utf-8");
@@ -68,12 +59,13 @@ public class CSViewerServlet extends HttpServlet
             resURL = System.class.getResource(inputResName);
             resPath = Paths.get(resURL.toURI());
             // printf() for formatted strings, so you can use arguments
-            out.printf(reader.readWholeFile(resPath, System.lineSeparator()), file, pSize);
+            out.printf(reader.readWholeFile(resPath, System.lineSeparator()), parameterFile, parameterSize);
 
             // print out file and add line breaks
-            if (file != null)
-                out.println(reader.readWholeFile(file, "<br/>"));
-
+            if (parameterFile != null)
+            {
+                out.println(reader.readWholeFile(Paths.get(parameterFile), "<br/>"));
+            }
             out.println("</html>");
 
         }
@@ -87,7 +79,8 @@ public class CSViewerServlet extends HttpServlet
     /**
      * Handles a POST request.
      */
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
+    IOException
     {
         /*
          * SAMPLE stub
@@ -108,5 +101,20 @@ public class CSViewerServlet extends HttpServlet
             out.println("</body>");
             out.println("</html>");
         }
+    }
+
+    /**
+     * @param request
+     * @return page size defined at request
+     * @throws NumberFormatException
+     */
+    public Integer getPageSize(HttpServletRequest request) throws NumberFormatException
+    {
+        String paramPSize = request.getParameter("psize");
+        if (paramPSize == null || paramPSize.isEmpty())
+        {
+            return Integer.valueOf(3); // Fallback to a default value.
+        }
+        return Integer.valueOf(paramPSize);
     }
 }

@@ -12,7 +12,7 @@ import java.io.PrintStream;
  * @author dmoench
  * 
  */
-public class InputReaderImpl implements InputReader
+public class InputReaderImpl
 {
 
     private final InputStream in;
@@ -27,13 +27,11 @@ public class InputReaderImpl implements InputReader
         in = inReader;
     }
 
-    @Override
     public Character readKey() throws IOException
     {
         return readKey("");
     }
 
-    @Override
     public Character readKey(String promptMessage) throws IOException
     {
         out.print(promptMessage);
@@ -43,13 +41,11 @@ public class InputReaderImpl implements InputReader
         return Character.valueOf(cbuf[0]);
     }
 
-    @Override
     public String readLine() throws IOException
     {
         return readLine("");
     }
 
-    @Override
     public String readLine(String promptMessage) throws IOException
     {
         out.print(promptMessage);

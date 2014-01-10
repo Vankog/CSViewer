@@ -12,7 +12,7 @@ import training.csviewer.server.WebServer;
  */
 public class CSViewerServerMain
 {
-
+    static final Integer WEBSERVER_PORT = 8081;
     /**
      * Starts up the Webserver and runs the CSViewer application.
      * 
@@ -24,7 +24,8 @@ public class CSViewerServerMain
     {
         try
         {
-            WebServer server = new WebServer();
+            @SuppressWarnings("unused")
+            WebServer server = new WebServer(WEBSERVER_PORT);
         }
         catch(Exception e)
         {

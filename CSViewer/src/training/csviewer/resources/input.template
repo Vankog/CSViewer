@@ -1,8 +1,8 @@
 <body>
     <p>This website shows a CSV file on the server.</p>
-    <form method='GET' action=''/>
-        file path on server: <input name='file' type='text' value='%s'/><br/>
-        page size: <input name='psize' type='number' value='%d'/><br/>
+    <form name="showCSV" method='GET' action=''/>
+        file path on server: <input id="file" name='file' type='text' value='%s'/><br/>
+        page size: <input id="psize" name='psize' type='text' value='%d'/><br/>
     <input type='submit' value='Submit' />
     </form>
 </body>

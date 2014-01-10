@@ -11,5 +11,29 @@
 	<classpathentry kind="lib" path="lib/jetty-all-9.1.0.v20131115.jar"/>
 	<classpathentry kind="lib" path="lib/javax.servlet-3.0.0.v201112011016.jar"/>
 	<classpathentry kind="lib" path="lib/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/com.intershop.html.client.gargoyle.jar" sourcepath="/com.intershop.html.client.gargoyle"/>
+	<classpathentry kind="lib" path="lib_httpclient/com.intershop.html.client.jar" sourcepath="/com.intershop.html.client"/>
+	<classpathentry kind="lib" path="lib_httpclient/com.intershop.test.data.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/commons-codec-1.8.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/cssparser-0.9.11.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/htmlunit-2.13.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/htmlunit-core-js-2.13.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/httpclient-4.3.1.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/httpclient-cache-4.2.1.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/httpcore-4.3.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/httpmime-4.3.1.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/jcl-over-slf4j-1.7.5.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/nekohtml-1.9.19.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/sac-1.3.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/xalan-2.7.1.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/xercesImpl-2.10.0.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/xmlbeans-2.5.0.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/jetty-http-8.1.12.v20130726.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/jetty-io-8.1.12.v20130726.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/jetty-util-8.1.12.v20130726.jar"/>
+	<classpathentry kind="lib" path="lib_httpclient/jetty-websocket-8.1.12.v20130726.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
