@@ -29,3 +29,11 @@
 1389265879940	Rename type 'CSViewerMain'
 1389265909809	Copy compilation unit
 1389268862129	Rename local variable 'resPath'
+1389344389791	Delete element
+1389344395134	Delete elements
+1389351391257	Delete elements
+1389360082908	Rename type 'WebsiteTest'
+1389364228773	Extract method 'goToWebsite'
+1389366726585	Rename method 'goToWebsite'
+1389366746362	Rename type 'HTMLUnitTest'
+1389368484486	Move compilation unit

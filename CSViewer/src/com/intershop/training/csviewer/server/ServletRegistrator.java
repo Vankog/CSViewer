@@ -2,6 +2,9 @@ package com.intershop.training.csviewer.server;
 
 import org.eclipse.jetty.servlet.ServletHandler;
 
+/**
+ * Registers the Servlet Handlers for each URL path.
+ */
 public class ServletRegistrator
 {
 

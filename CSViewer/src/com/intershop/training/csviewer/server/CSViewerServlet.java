@@ -19,6 +19,9 @@ import resources.com.intershop.training.csviewer.server.RESOURCES;
 
 import com.intershop.training.csviewer.io.StringFileReader;
 
+/**
+ * Holds the logic for the website.
+ */
 @SuppressWarnings("serial")
 public class CSViewerServlet extends HttpServlet
 {
@@ -26,10 +29,10 @@ public class CSViewerServlet extends HttpServlet
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Override
     /**
      * Handles a GET request.
      */
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
         // get parameters
@@ -59,9 +62,7 @@ public class CSViewerServlet extends HttpServlet
 
             // print out file and add line breaks
             if (parameterFile != null)
-            {
                 out.println(reader.readWholeFile(Paths.get(parameterFile), "<br/>"));
-            }
             out.println("</html>");
 
         }
@@ -71,10 +72,10 @@ public class CSViewerServlet extends HttpServlet
         }
     }
 
-    @Override
     /**
      * Handles a POST request.
      */
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
     IOException
     {
@@ -108,9 +109,7 @@ public class CSViewerServlet extends HttpServlet
     {
         String paramPSize = request.getParameter("psize");
         if (paramPSize == null || paramPSize.isEmpty())
-        {
             return Integer.valueOf(3); // Fallback to a default value.
-        }
         return Integer.valueOf(paramPSize);
     }
 }

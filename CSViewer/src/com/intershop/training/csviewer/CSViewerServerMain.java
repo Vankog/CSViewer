@@ -12,7 +12,11 @@ import com.intershop.training.csviewer.server.WebServer;
  */
 public class CSViewerServerMain
 {
-    public static final Integer WEBSERVER_PORT = 8081;
+    /**
+     * The Port on which the server shall be available.
+     */
+    public static final Integer WEBSERVER_PORT = Integer.valueOf(8081);
+
     /**
      * Starts up the Webserver and runs the CSViewer application.
      * 
@@ -24,6 +28,7 @@ public class CSViewerServerMain
     {
         try
         {
+            // Desktop.getDesktop().browse(new URI("http://localhost:" + WEBSERVER_PORT));
             @SuppressWarnings("unused")
             WebServer server = new WebServer(WEBSERVER_PORT);
         }

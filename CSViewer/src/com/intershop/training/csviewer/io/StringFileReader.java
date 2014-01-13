@@ -11,11 +11,20 @@ import java.util.Objects;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Simple file reader to read in all lines of a provided text file.
+ */
 public class StringFileReader
 {
     private final Charset chSet;
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
+    /**
+     * Constructor to initialize the Charset.
+     * 
+     * @param charSet
+     *            The Charset to use for the file.
+     */
     public StringFileReader(Charset charSet)
     {
         Objects.requireNonNull(charSet, "Missing charset");

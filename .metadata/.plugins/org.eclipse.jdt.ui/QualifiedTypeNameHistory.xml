@@ -1,24 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="training.daniel.state.ValueState"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="training.daniel.state.NavigationState"/>
-<fullyQualifiedTypeName name="training.daniel.navigation.NavActionRegistry"/>
-<fullyQualifiedTypeName name="java.io.InputStream"/>
-<fullyQualifiedTypeName name="java.io.PrintStream"/>
-<fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
-<fullyQualifiedTypeName name="training.daniel.navigation.action.NavAction"/>
-<fullyQualifiedTypeName name="training.daniel.navigation.NavigationRegistrator"/>
-<fullyQualifiedTypeName name="training.daniel.navigation.NavigationRegistratorImpl"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="training.daniel.navigation.Navigator"/>
-<fullyQualifiedTypeName name="training.daniel.navigation.NavigatorImpl"/>
-<fullyQualifiedTypeName name="training.daniel.IO.InputReader"/>
-<fullyQualifiedTypeName name="training.daniel.CSViewer"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="ch.qos.logback.classic.Logger"/>
-<fullyQualifiedTypeName name="org.apache.log4j.spi.LoggerFactory"/>
 <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
 <fullyQualifiedTypeName name="tests.training.daniel.CSVLoaderTest"/>
 <fullyQualifiedTypeName name="org.eclipse.jetty.server.handler.AbstractHandler"/>
@@ -49,7 +30,6 @@
 <fullyQualifiedTypeName name="org.slf4j.Logger"/>
 <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.Collection"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
 <fullyQualifiedTypeName name="java.nio.file.AccessDeniedException"/>
@@ -60,4 +40,24 @@
 <fullyQualifiedTypeName name="training.csviewer.IO.InputReader"/>
 <fullyQualifiedTypeName name="training.csviewer.IO.InputReaderImpl"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
+<fullyQualifiedTypeName name="tests.com.intershop.html.client.gargoyle.GetWebPageTest"/>
+<fullyQualifiedTypeName name="com.intershop.html.client.element.WebClient"/>
+<fullyQualifiedTypeName name="com.gargoylesoftware.htmlunit.WebWindowListener"/>
+<fullyQualifiedTypeName name="tests.com.intershop.html.client.element.AbstractWebClientTest"/>
+<fullyQualifiedTypeName name="com.intershop.html.client.gargoyle.element.WebClientImpl"/>
+<fullyQualifiedTypeName name="org.junit.BeforeClass"/>
+<fullyQualifiedTypeName name="org.junit.AfterClass"/>
+<fullyQualifiedTypeName name="org.junit.runners.Parameterized"/>
+<fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="org.junit.runners.Parameterized.Parameters"/>
+<fullyQualifiedTypeName name="org.junit.runners.Parameterized.Parameter"/>
+<fullyQualifiedTypeName name="org.junit.Ignore"/>
+<fullyQualifiedTypeName name="org.junit.Before"/>
+<fullyQualifiedTypeName name="resources.tests.com.intershop.training.csviewer.data.RESOURCES"/>
+<fullyQualifiedTypeName name="java.awt.Desktop"/>
+<fullyQualifiedTypeName name="java.net.URI"/>
+<fullyQualifiedTypeName name="com.intershop.training.csviewer.CSViewerConsoleMain"/>
+<fullyQualifiedTypeName name="com.intershop.training.csviewer.CSViewerServerMain"/>
 </qualifiedTypeNameHistroy>

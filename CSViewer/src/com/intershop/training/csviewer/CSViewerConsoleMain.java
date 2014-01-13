@@ -9,7 +9,7 @@ import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import com.intershop.training.csviewer.io.InputReaderImpl;
+import com.intershop.training.csviewer.io.InputReader;
 import com.intershop.training.csviewer.io.StringFileReader;
 
 /**
@@ -37,16 +37,14 @@ public class CSViewerConsoleMain
          * SAMPLE stub
          */
         if (args.length < 2)
-        {
             return;
-        }
 
-        Path    csvPath;
+        Path csvPath;
         Integer pageSize;
         try
         {
-            csvPath     = Paths.get(args[0]);
-            pageSize    = Integer.valueOf(args[1]);
+            csvPath = Paths.get(args[0]);
+            pageSize = Integer.valueOf(args[1]);
         }
         catch(InvalidPathException | NumberFormatException e)
         {
@@ -58,10 +56,10 @@ public class CSViewerConsoleMain
          */
 
         // readkey and readline implementations
-        InputReaderImpl in = new InputReaderImpl(System.out, System.in);
+        InputReader in = new InputReader(System.out, System.in);
         Character key = in.readKey("Enter 'y' to print file: ");
 
-        if (key.equals('y'))
+        if (key.equals(Character.valueOf('y')))
         {
             // simple file reader implementation
             // readAllLines() can also output lines as List<String>
@@ -69,7 +67,7 @@ public class CSViewerConsoleMain
             reader.readWholeFile(csvPath, System.lineSeparator());
 
             System.out.println(reader.readWholeFile(csvPath, System.lineSeparator()));
-            System.out.println("PageSize is " + pageSize.toString() + System.lineSeparator());
+            System.out.println("PageSize is " + pageSize + System.lineSeparator());
         }
     }
 }
